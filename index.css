@@ -1,0 +1,159 @@
+/* ===== CSS RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== ROOT COLORS ===== */
+:root {
+  --bg-main: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.15);
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --error: #f87171;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+}
+
+/* ===== FORM ===== */
+.weatherForm {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+/* ===== INPUT ===== */
+.cityInput {
+  width: 280px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  outline: none;
+  backdrop-filter: blur(10px);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.cityInput::placeholder {
+  color: var(--text-muted);
+}
+
+.cityInput:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+/* ===== BUTTON ===== */
+button[type="submit"] {
+  padding: 14px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--accent), #22d3ee);
+  color: #020617;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ===== CARD ===== */
+.card {
+  width: 340px;
+  padding: 32px;
+  border-radius: 20px;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+/* ===== TEXT ===== */
+.cityDisplay {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.tempDisplay {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.humidityDisplay,
+.descDescription {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.descDescription {
+  font-style: italic;
+}
+
+/* ===== EMOJI ===== */
+.weatherEmoji {
+  font-size: 4.5rem;
+  margin-top: 14px;
+}
+
+/* ===== ERROR ===== */
+.errorDisplay {
+  display: none;
+  margin-top: 10px;
+  color: var(--error);
+  font-weight: 600;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 400px) {
+  .weatherForm {
+    flex-direction: column;
+  }
+
+  .cityInput {
+    width: 100%;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
