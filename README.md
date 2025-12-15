@@ -4,6 +4,18 @@ This is a **small learning-focused project** built to practice and strengthen my
 
 ---
 
+## 🌐 Live Demo
+
+You can view the live version of this project here:
+
+🔗 [https://dulandhanush.github.io/WeatherApp/](https://dulandhanush.github.io/WeatherApp/)
+
+
+<img width="1902" height="858" alt="image" src="https://github.com/user-attachments/assets/a95bfb17-ae7d-4b4d-8811-b24d36f1f4bc" />
+
+
+---
+
 ## 🎯 What I Learned From This Project
 
 Through building this weather app, I practiced and understood:
